@@ -67,6 +67,6 @@ public class Person {
 
     @Override
     public String toString() {
-        return '\n' + "Recently added person is: "+'\n'+ "First name: " + firstName +'\n'+ "Last name: " + lastName +'\n'+ "Phone number: " + phoneNumber +'\n'+ "Address: " + address +'\n'+ "City: " + city +'\n'+ "State: " + state +'\n'+ "zip: " + zip ;
+        return '\n'+ "First name: " + firstName +'\n'+ "Last name: " + lastName +'\n'+ "Phone number: " + phoneNumber +'\n'+ "Address: " + address +'\n'+ "City: " + city +'\n'+ "State: " + state +'\n'+ "zip: " + zip ;
     }
 }
