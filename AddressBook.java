@@ -214,7 +214,7 @@ public class AddressBook extends Function {
                     if(addressBookCheck(addressBooks, addressBookNameS)!=1) {
                         System.out.println("No record(s) found.");
                         break;
-                    }
+                    } 
                     else {
                         List<Person> person = addressBooks.get(addressBookNameS);
                         searchByCity(person);

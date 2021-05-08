@@ -63,7 +63,7 @@ public class Function {
             System.out.println(arr);
             System.out.println();
         }
-    }
+    } 
     public static void searchByCity(List<Person> person) {
         System.out.println("Enter the city name to search contacts: ");
         Scanner scanner = new Scanner(System.in);
