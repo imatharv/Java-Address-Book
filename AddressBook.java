@@ -4,6 +4,7 @@ import java.lang.*;
 
 public class AddressBook extends Function {
     public void displayOptions() {
+        HashMap<String, ArrayList<Person>> addressBooks = new HashMap<String, ArrayList<Person>>();
         Scanner scanner = new Scanner(System.in);
         int option;
         int outerFlag = 0;
@@ -13,6 +14,8 @@ public class AddressBook extends Function {
             System.out.println("2 for display all address books");
             System.out.println("3 for edit person details in address book");
             System.out.println("4 for delete an address book");
+            System.out.println("5 for search in address books by city");
+            System.out.println("6 for search in address books by state");
             System.out.println("0 for exit");
             System.out.println("Enter your choice: ");
             option = scanner.nextInt(); 
@@ -20,14 +23,16 @@ public class AddressBook extends Function {
                 case 1: 
                     System.out.println("Creating a new address book..");
                     System.out.println("Please provide the name for the address book: ");
+                    scanner.nextLine();
                     String bookName = scanner.nextLine();
                     createBook(bookName, addressBooks);
                     break;
 
                 case 2: 
                     System.out.println("Displaying all address book(s)..");
-                    displayAddressBooks(HashMap<String, ArrayList<Person>>);
+                    displayAllAddressBooks(addressBooks);
                     System.out.println("Name of address books you want view information in: ");
+                    scanner.nextLine();
                     String name = scanner.nextLine();
 
                     if(addressBooks.containsKey(name)) {
@@ -44,11 +49,12 @@ public class AddressBook extends Function {
                 case 3:
                     System.out.println("Editing records in the address book..");
                     System.out.println("Displaying all address books");
-                    displayAddressBooks();
+                    displayAllAddressBooks(addressBooks);
                     System.out.println("Select from the address books list,");
                     System.out.println("Name of address books you want to alter information in: ");
+                    scanner.nextLine();
                     String addressBookName = scanner.nextLine();
-                    if(addressBookCheck(HashMap<String, ArrayList<Person>>, addressBookName)!=1) {
+                    if(addressBookCheck(addressBooks, addressBookName)!=1) {
                         System.out.println("No record(s) found.");
                         break;
                     }
@@ -185,6 +191,21 @@ public class AddressBook extends Function {
                     String addressBookNameD = scanner.nextLine();
                     break;
                 
+                case 5: 
+                    System.out.println("Searching by city..");
+                    System.out.println("Name of address books you want to search information in: ");
+                    scanner.nextLine();
+                    String addressBookNameS = scanner.nextLine();
+                    if(addressBookCheck(addressBooks, addressBookNameS)!=1) {
+                        System.out.println("No record(s) found.");
+                        break;
+                    }
+                    else {
+                        List<Person> person = addressBooks.get(addressBookNameS);
+                        searchByCity(person);
+                        break;
+                    }
+
                 case 0:
                     outerFlag = 1;
                     break;

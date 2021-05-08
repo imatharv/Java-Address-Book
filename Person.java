@@ -3,13 +3,13 @@ import java.io.*;
 import java.lang.*;
 
 public class Person {
-    private final String firstName; // Can't be edited so private and final
-    private final String lastName; // Can't be edited so private and final
-    private String phoneNumber;
-    private String address;
-    private String city;
-    private String state;
-    private String zip;
+    public final String firstName; // Can't be edited so private and final
+    public final String lastName; // Can't be edited so private and final
+    public String phoneNumber;
+    public String address;
+    public String city;
+    public String state;
+    public String zip;
 
     public Person(String firstName, String lastName, String phoneNumber, String address, String city, String state, String zip) {
         this.firstName = firstName;
