@@ -219,7 +219,7 @@ public class AddressBook extends Function {
                         List<Person> person = addressBooks.get(addressBookNameS);
                         searchByCity(person);
                         break;
-                    }
+                    } 
 
                 case 0:
                     outerFlag = 1;

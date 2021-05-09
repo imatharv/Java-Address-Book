@@ -61,7 +61,7 @@ public class Person {
         this.state = state;
     }
 
-    public String getPin() {
+    public String getPin() { 
         return zip;
     }
 

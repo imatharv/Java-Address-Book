@@ -69,7 +69,7 @@ public class Function {
         Scanner scanner = new Scanner(System.in);
         String city = scanner.nextLine();
         person.stream().filter(p -> p.getCity().equals(city)).forEach(System.out::println);
-    }
+    } 
     public static void searchByState(List<Person> person) {
         System.out.println("Enter the state name to search contacts: ");
         Scanner scanner = new Scanner(System.in);
