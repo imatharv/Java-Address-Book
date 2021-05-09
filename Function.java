@@ -42,6 +42,17 @@ public class Function {
         }
         records.set(index, personObj);
     }
+    public void deletePerson(String fname, String lname) {
+        int size = records.size();
+        for (int i=0; i<size; i++){
+            String f = records.get(i).getFname();
+            String l = records.get(i).getLname();
+            if(f.equals(fname) && l.equals(lname)) {
+                records.remove(i);
+                break;
+            }
+        }
+    }
     public void displayAll(ArrayList<Person> arr) {
         boolean isEmpty = arr.isEmpty();
         if(isEmpty == true) {
@@ -49,6 +60,6 @@ public class Function {
         } else {
             System.out.println(arr);
             System.out.println();
-        }	
+        }
     }
 }

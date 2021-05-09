@@ -12,6 +12,7 @@ public class AddressBook extends Function {
             System.out.println("1 for add new person details in the address book");
             System.out.println("2 for display list of persons in address book");
             System.out.println("3 for edit person details in address book");
+            System.out.println("4 for delete a person in address book");
             System.out.println("0 for exit");
             System.out.println("Enter your choice: ");
             choice = scanner.nextInt();
@@ -99,6 +100,22 @@ public class AddressBook extends Function {
                                 break;
                         }
                     }
+                    break;
+
+                case 4: 
+                    scanner.nextLine();
+                    System.out.println("Enter first name: ");
+                    String first = scanner.nextLine();
+                    System.out.println("Enter last name: ");
+                    String last = scanner.nextLine();
+
+                    int indx = findIndex(records, first, last);
+                    if(indx == -1) {
+                        System.out.println("Record not found!");
+                        break;
+                    }
+                    deletePerson(first, last);
+                    System.out.println("Record successfully deleted.");
                     break;
 
                 case 0:
