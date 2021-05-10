@@ -15,7 +15,7 @@ public class AddressBook extends Function {
             System.out.println("4 for delete a person in address book");
             System.out.println("0 for exit");
             System.out.println("Enter your choice: ");
-            choice = scanner.nextInt();
+            choice = scanner.nextInt(); 
             switch (choice) {
                 case 1:
                     scanner.nextLine();
