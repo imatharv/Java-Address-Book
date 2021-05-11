@@ -202,22 +202,22 @@ public class AddressBook extends Function {
                     }
                     else {
                         List<Person> person = addressBooks.get(addressBookNameS);
-                        searchByCity(person);
+                        viewByCity(person);
                         break;
                     }
                 
                 case 6: 
-                    System.out.println("Searching by city..");
+                    System.out.println("Searching by state..");
                     System.out.println("Name of address books you want to search information in: ");
                     scanner.nextLine();
-                    String addressBookNameS = scanner.nextLine();
-                    if(addressBookCheck(addressBooks, addressBookNameS)!=1) {
+                    String addressBookNamee = scanner.nextLine();
+                    if(addressBookCheck(addressBooks, addressBookNamee)!=1) {
                         System.out.println("No record(s) found.");
                         break;
                     } 
                     else {
-                        List<Person> person = addressBooks.get(addressBookNameS);
-                        searchByCity(person);
+                        List<Person> person = addressBooks.get(addressBookNamee);
+                        viewByState(person);
                         break;
                     } 
 
