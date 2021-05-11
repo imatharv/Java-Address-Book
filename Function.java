@@ -87,7 +87,7 @@ public class Function {
     	Scanner scanner = new Scanner(System.in);
         String state = scanner.nextLine();
     	person.stream().filter(p -> p.getState().equals(state)).forEach(p -> System.out.println("Name: " + p.getFname() + p.getLname()));
-    }
+    } 
     //AddressBookOperations
     public void createBook(String bookName, HashMap<String, ArrayList<Person>> addressBooks) {
         Scanner scanner = new Scanner(System.in);

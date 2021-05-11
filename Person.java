@@ -79,7 +79,7 @@ public class Person {
             if(records.get(i).getPhoneNumber().equals(phoneNumber)) {
                 return i;
             }
-        }
+        } 
         return -1;
     }
 }

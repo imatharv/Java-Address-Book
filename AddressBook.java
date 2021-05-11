@@ -189,7 +189,7 @@ public class AddressBook extends Function {
                     System.out.println("Select from the address books list,");
                     System.out.println("Name of address books you want to delete: ");
                     String addressBookNameD = scanner.nextLine();
-                    break;
+                    break; 
                 
                 case 5: 
                     System.out.println("Searching by city..");
