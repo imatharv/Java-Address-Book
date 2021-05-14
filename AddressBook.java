@@ -187,10 +187,12 @@ public class AddressBook extends Function {
                 case 4:
                     System.out.println("Deleting the address book..");
                     System.out.println("Displaying all address books");
-                    //list goes here
+                    displayAllAddressBooks(addressBooks);
                     System.out.println("Select from the address books list,");
                     System.out.println("Name of address books you want to delete: ");
+                    scanner.nextLine();
                     String addressBookNameD = scanner.nextLine();
+
                     break; 
                 
                 case 5: 
