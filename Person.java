@@ -72,14 +72,14 @@ public class Person {
     @Override
     public String toString() {
         return '\n'+ "First name: " + firstName +'\n'+ "Last name: " + lastName +'\n'+ "Phone number: " + phoneNumber +'\n'+ "Address: " + address +'\n'+ "City: " + city +'\n'+ "State: " + state +'\n'+ "zip: " + zip ;
-    } 
-
+    }
+    
     public static int findPhoneNo(ArrayList<Person> records, String phoneNumber) {
         for(int i=0; i<records.size(); i++) {
             if(records.get(i).getPhoneNumber().equals(phoneNumber)) {
                 return i;
             }
-        } 
+        }
         return -1;
     }
 }

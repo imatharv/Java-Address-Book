@@ -94,7 +94,7 @@ public class Function {
         String city = scanner.next();
         Long countNamesByCity = person.stream().filter(e -> city.equals(e.getCity())).count();
         System.out.println(city+ " : " + countNamesByCity);	 	 
-    }
+    } 
     public static void countByState(List<Person> person) {
         System.out.println("Enter the state name to count the contacts for: ");
         Scanner scanner = new Scanner(System.in);

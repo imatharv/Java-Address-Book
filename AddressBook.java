@@ -261,7 +261,6 @@ public class AddressBook extends Function {
                     System.out.println("Invalid choice.");
             }
         }
-        
     }
     public static void main(String[] args) {
         System.out.println("Welcome to the Address Book");
