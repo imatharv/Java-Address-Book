@@ -7,4 +7,4 @@ class ComparePersons implements Comparator<Person> {
     public int compare(Person object1, Person object2) {
         return object1.getFname().compareTo(object2.getFname());
     }
-}
+} 

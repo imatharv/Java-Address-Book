@@ -21,7 +21,7 @@ public class AddressBook extends Function {
             System.out.println("0 for exit");
             System.out.println("Enter your choice: ");
             option = scanner.nextInt(); 
-            switch(option) {
+            switch(option) { 
                 case 1: 
                     System.out.println("Creating a new address book..");
                     System.out.println("Please provide the name for the address book: ");
