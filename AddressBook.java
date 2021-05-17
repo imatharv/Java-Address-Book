@@ -197,7 +197,7 @@ public class AddressBook extends Function {
 
                 case 5:
                     System.out.println("Searching..");
-                    System.out.println("Name of address books you want to count information in: ");
+                    System.out.println("Name of address books you want to search information in: ");
                     scanner.nextLine();
                     String addressBookNamee = scanner.nextLine();
 
@@ -214,11 +214,11 @@ public class AddressBook extends Function {
                         int countOption = scanner.nextInt();
                         switch(countOption) {
                             case 1:
-                                System.out.println("Counting by city..");
+                                System.out.println("Searching by city..");
                                 viewByCity(person);
                                 break;
                             case 2:
-                                System.out.println("Counting by state..");
+                                System.out.println("Searching by state..");
                                 viewByState(person);
                                 break;
                             default:
@@ -226,6 +226,7 @@ public class AddressBook extends Function {
                                 break;
                         }
                     }
+                    break;
 
                 case 6:
                     System.out.println("Counting..");
@@ -240,8 +241,8 @@ public class AddressBook extends Function {
                     else {
                         List<Person> person = addressBooks.get(addressBName);
                         System.out.println("Select from the following options: ");
-                        System.out.println("1 for sort by name");
-                        System.out.println("2 for sort by city");
+                        System.out.println("1 for count by name");
+                        System.out.println("2 for count by city");
                         System.out.println("Enter your choice: ");
                         int countOption = scanner.nextInt();
                         switch(countOption) {
@@ -257,7 +258,8 @@ public class AddressBook extends Function {
                                 System.out.println("Invalid input.");
                                 break;
                         }
-                    }       
+                    }
+                    break;
 
                 case 7:
                     System.out.println("Sorting..");
@@ -300,6 +302,7 @@ public class AddressBook extends Function {
                                 break;
                         }
                     }
+                    break;
 
                 case 0:
                     outerFlag = 1;
