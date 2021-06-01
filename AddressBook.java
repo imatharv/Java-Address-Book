@@ -1,5 +1,6 @@
+package com.work;
+
 import java.util.*;
-import java.io.*;
 import java.lang.*;
 
 public class AddressBook extends Function {
@@ -18,6 +19,7 @@ public class AddressBook extends Function {
             System.out.println("6 for search in address books by state");
             System.out.println("7 for count contacts in address books by city");
             System.out.println("8 for count contacts in address books by state");
+            System.out.println("9 for sort contacts in address books by state");
             System.out.println("0 for exit");
             System.out.println("Enter your choice: ");
             option = scanner.nextInt(); 
@@ -72,7 +74,7 @@ public class AddressBook extends Function {
                         System.out.println("0 for exit");
                         System.out.println("Enter your choice: ");
                         choice = scanner.nextInt(); 
-                        switch (choice) {
+                        switch(choice) {
                             case 1:
                                 scanner.nextLine();
                                 System.out.println("Enter first name: ");
@@ -253,7 +255,22 @@ public class AddressBook extends Function {
                         List<Person> person = addressBooks.get(addressBkName);
                         countByState(person);
                         break;
-                    }          
+                    }       
+
+                case 9: 
+                    System.out.println("Sorting by state..");
+                     System.out.println("Name of address books you want to get sort information in: ");
+                     scanner.nextLine();
+                     String addressBN = scanner.nextLine();
+                     if(addressBookCheck(addressBooks, addressBN)!=1) {
+                         System.out.println("No record(s) found.");
+                         break;
+                     }
+                     else {
+                         List<Person> person = addressBooks.get(addressBN);
+                         sortedPersonByFirstName(person);
+                         break;
+                     }
 
                 case 0:
                     outerFlag = 1;
