@@ -109,6 +109,15 @@ public class Function {
         List<Person> sortedPerson = person.stream().sorted(new ComparePersons()).collect(Collectors.toList());
         System.out.println(sortedPerson);
     }
+    public static void sortedPersonByCity(List<Person> person) {
+        person.stream().sorted(new CompareCity()).forEach(System.out::println);
+    }
+    public static void sortedPersonByState(List<Person> person) {
+        person.stream().sorted(new CompareState()).forEach(System.out::println);
+    }
+    public static void sortedPersonByZip(List<Person> person) {
+        person.stream().sorted(new CompareZip()).forEach(System.out::println);
+    }
     //AddressBookOperations
     public void createBook(String bookName, HashMap<String, ArrayList<Person>> addressBooks) {
         Scanner scanner = new Scanner(System.in);
